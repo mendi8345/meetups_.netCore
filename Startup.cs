@@ -45,7 +45,6 @@ namespace meetupProj.net
 			//System.Web.Http.Services.AddCors();
 			app.UseEndpoints(endpoints =>
 			{
-
 				endpoints.MapControllers();
 			});
 		}

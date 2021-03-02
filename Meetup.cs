@@ -8,7 +8,7 @@ namespace meetupProj.net
 		{
 		}
 
-		public Meetup(int id, string date, string location, string description, Person[]subscribers)
+		public Meetup(int id, DateTime date, string location, string description, Person[]subscribers)
 		{
 			Id = id;
 			Date = date;
@@ -18,7 +18,7 @@ namespace meetupProj.net
 		}
 
 		public int Id { get; set; }
-		public string Date { get; set; }
+		public DateTime Date { get; set; }
 		public string Location { get; set; }
 		public string description { get; set; }
 		public Person[] subscribers { get; set; }

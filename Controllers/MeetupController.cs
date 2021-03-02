@@ -17,11 +17,20 @@ namespace meetupProj.net.Controllers
 
 
 		[HttpGet]
-
-		public Meetup[] Get()
+		[HttpGet("GetAll")]
+		public Meetup[] GetAll()
 		{
 			Meetup[] meetups = Model.getAllMeetups();
 			return meetups;
+		}
+		[HttpGet("GetMeetupsBetweenDates/{startDate}/{endDate}")]
+		public Meetup[] GetMeetupsBetweenDates(string startDate,string endDate)
+		{
+			Console.WriteLine("wow");
+			Meetup[] meetups = Model.getAllMeetups();
+			return Model.getMeetupsBetween(startDate, endDate);
+			//return Model.getAllMeetups();
+
 		}
 	}
 }
